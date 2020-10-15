@@ -1,4 +1,4 @@
-from wagtail.wagtailcore.models import Page
+from wagtail.core.models import Page
 from wagtail.tests.utils import WagtailPageTests
 
 from wagtail_box.blog.models import Blog, Post

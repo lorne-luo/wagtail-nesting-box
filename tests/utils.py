@@ -1,5 +1,5 @@
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.middleware import SiteMiddleware
+from wagtail.core.models import Page
+from wagtail.core.middleware import SiteMiddleware
 
 
 def get_root_page():

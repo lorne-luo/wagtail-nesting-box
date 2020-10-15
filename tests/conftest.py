@@ -8,7 +8,7 @@ def site():
     Django configuration settings
     """
     from django.conf import settings
-    from wagtail.wagtailcore.models import Site
+    from wagtail.core.models import Site
 
     return Site.objects.get(id=settings.SITE_ID)
 
@@ -60,8 +60,8 @@ def pytest_configure():
             'django.middleware.clickjacking.XFrameOptionsMiddleware',
             'django.middleware.security.SecurityMiddleware',
 
-            'wagtail.wagtailcore.middleware.SiteMiddleware',
-            'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+            'wagtail.core.middleware.SiteMiddleware',
+            'wagtail.contrib.redirects.middleware.RedirectMiddleware',
         ),
         INSTALLED_APPS=(
             'wagtail_box',
@@ -69,17 +69,17 @@ def pytest_configure():
             'wagtail_box.pages',
 
             'wagtail.contrib.settings',
-            'wagtail.wagtailforms',
-            'wagtail.wagtailredirects',
-            'wagtail.wagtailembeds',
-            'wagtail.wagtailsites',
-            'wagtail.wagtailusers',
-            'wagtail.wagtailsnippets',
-            'wagtail.wagtaildocs',
-            'wagtail.wagtailimages',
-            'wagtail.wagtailsearch',
-            'wagtail.wagtailadmin',
-            'wagtail.wagtailcore',
+            'wagtail.contrib.forms',
+            'wagtail.contrib.redirects',
+            'wagtail.embeds',
+            'wagtail.sites',
+            'wagtail.users',
+            'wagtail.snippets',
+            'wagtail.documents',
+            'wagtail.images',
+            'wagtail.search',
+            'wagtail.admin',
+            'wagtail.core',
 
             'modelcluster',
             'taggit',
