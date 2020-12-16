@@ -1,3 +1,7 @@
+# 0.3.0
+
+fit django 2.2 and wagtail 2.10
+
 # 0.2.1
 
 * update docs
